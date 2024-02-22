@@ -7,6 +7,8 @@ import json
 # json files with int values and merges
 # them into one, preserving all key paths
 # 
+# usage: json_merger <operation (+, - and * supported)> <file1.json> ... <fileN.json>
+#
 
 # iterates over all files and adds the values to the result dict
 def json_merge(*paths):
