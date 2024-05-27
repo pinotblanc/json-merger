@@ -6,7 +6,7 @@ import json
 # the script takes any amount of nested
 # json files with int values and merges
 # them into one, preserving all key paths
-# 
+#
 # usage: json_merger <operation (+, - and * supported)> <file1.json> ... <fileN.json>
 #
 
@@ -66,12 +66,11 @@ def rec_sum(data, result, result_path):
             print("ERROR, value " + value + " is not an int!")
             sys.exit(1)
 
-    
 
 if __name__ == "__main__":
 
     # check for help flag
-    if sys.argv[1] in ["-help", "-h", "help", "h"]:
+    if len(sys.argv) < 2 or sys.argv[1] in ["-help", "-h", "help", "h"]:
         print("usage: json_merger <operation (+, - and * supported)> <file1.json> ... <fileN.json>")
         sys.exit(0)
 
